@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <img src="icon.png" alt="">
+            <h1>Love Calculator</h1>
+            <div class="inputarea">
+                <input type="text" placeholder="Your Name" id="NameOne" onfocus="this.value = ''">
+                <input type="text" placeholder="Your Lover" id="NameTwo" onfocus="this.value = ''">
+            </div>
+            <a href="#" onclick="love()">Calculate</a>
+            <p id="print">Your relationship result here</p>
+            <p id="statement"></p>
+        </div>
+    </div>
+    <script>
+        function love(){
+            var name1 = document.getElementById("NameOne").value.toLowerCase();
+            var name2 = document.getElementById("NameTwo").value.toLowerCase();
+            var lovePercentage;
+            if ((name1 === "brandon" || name1 === "brandon rosen" || name1 === "icy" || name1 === "itzicygaming") && (name2 === "olivia" || name2 === "olivia nieman" || name2 === "liv" || name2 === "livvy") || 
+                (name2 === "brandon" || name2 === "brandon rosen" || name2 === "icy" || name2 === "itzicygaming") && (name1 === "olivia" || name1 === "olivia nieman" || name1 === "liv" || name1 === "livvy")) {
+                lovePercentage = Math.floor(Math.random() * 11) + 90; // Generates a random number between 90 and 100
+            } else {
+                lovePercentage = Math.floor(Math.random() * 51) + 50; // Generates a random number between 50 and 100
+            }
+            document.getElementById("print").innerHTML = name1 + " and " + name2 + " = " + lovePercentage + "%" + " of love";
+            if(lovePercentage <= 50){
+                document.getElementById("statement").innerHTML = "Good Relationship";
+            } else {
+                document.getElementById("statement").innerHTML = "Lovely Relationship";
+            }
+        }
+    </script>
+</body>
+</html>
