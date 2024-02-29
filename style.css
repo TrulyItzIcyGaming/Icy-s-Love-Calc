@@ -37,7 +37,7 @@ body{
     display: flex;
 }
 .inputarea input{
-    width: 200px;
+    width: fit-content;
     height: 30px;
     text-align: center;
     margin: 5px;
@@ -45,6 +45,7 @@ body{
     border: 2px solid #d7385c;
     padding: 20px 40px;
     font-size: 20px;
+    position: relative;
 }
 a{
     display: flex;
